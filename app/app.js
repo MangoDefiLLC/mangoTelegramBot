@@ -3,21 +3,17 @@ require('dotenv').config();
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new Telegraf(process.env.BOT_API_KEY);
 
+const WEB_APP_URL="https://w16.one-punsh-man.com/manga/one-punch-man-chapter-29-1-things-one-cannot-buy/"
 //const provider = process.env.BASE_RPC;
 //const serverEndpoint = 'http://localhost:1000'; 
 //const botResp = new Actions(serverEndpoint,provider)//http://127.0.0.1:9000/
 //const WEB_APP_URL = "https://t.me/mangoDefiBot/Mango";
 const welcome = "Bienvenid@!🎉🎊🕺🏻\n\n🥭MANGO DEFI BOT🤖!\nDonde swapiar token es tan facil como comerse un mango🥭\n\n"
-
-bot.start( async (ctx) => {
-  return await ctx.reply(`${welcome}`, Markup
-    .keyboard([
-      ['Launch App'],
-    ])
-    .oneTime()
-    .resize()
-  )
-})
+const info = "Mango defi es un Telegram Mini app para facilitar el intercambio de block chain based tokens\n\n"
+bot.start( async (ctx) => ctx.reply(
+		`${welcome}${info}`,
+		Markup.inlineKeyboard([Markup.button.webApp("OPEN APP!", WEB_APP_URL)]),
+	));
 
 bot.launch();
 /** 

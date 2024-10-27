@@ -3,7 +3,7 @@ require('dotenv').config();
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new Telegraf(process.env.BOT_API_KEY);
 
-const WEB_APP_URL="https://w16.one-punsh-man.com/manga/one-punch-man-chapter-29-1-things-one-cannot-buy/"
+const WEB_APP_URL="https://779d-24-50-234-156.ngrok-free.app"
 //const provider = process.env.BASE_RPC;
 //const serverEndpoint = 'http://localhost:1000'; 
 //const botResp = new Actions(serverEndpoint,provider)//http://127.0.0.1:9000/

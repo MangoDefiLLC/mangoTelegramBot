@@ -3,7 +3,7 @@ require('dotenv').config();
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new Telegraf(process.env.BOT_API_KEY);
 
-const WEB_APP_URL="https://779d-24-50-234-156.ngrok-free.app"
+const WEB_APP_URL = process.env.WEB_APP_URL;
 //const provider = process.env.BASE_RPC;
 //const serverEndpoint = 'http://localhost:1000'; 
 //const botResp = new Actions(serverEndpoint,provider)//http://127.0.0.1:9000/
@@ -11,7 +11,7 @@ const WEB_APP_URL="https://779d-24-50-234-156.ngrok-free.app"
 const welcome = "Bienvenid@!🎉🎊🕺🏻\n\n🥭MANGO DEFI BOT🤖!\nDonde swapiar token es tan facil como comerse un mango🥭\n\n"
 const info = "Mango defi es un Telegram Mini app para facilitar el intercambio de block chain based tokens\n\n"
 bot.start( async (ctx) => ctx.reply(
-		`${welcome}${info}`,
+		`${welcome+info}`,
 		Markup.inlineKeyboard([Markup.button.webApp("OPEN APP!", WEB_APP_URL)]),
 	));
 

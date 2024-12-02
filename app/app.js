@@ -11,7 +11,6 @@ const info = "Mango defi es un Telegram Mini app para facilitar el intercambio d
 bot.start( async (ctx) => ctx.reply(
 		`${welcome+info}`,
 		Markup.inlineKeyboard([Markup.button.webApp("OPEN APP!", WEB_APP_URL)]),
-    console.log('is working')
 	));
 
 bot.launch();

@@ -19,3 +19,14 @@ button and query example from telegraf
 telegraf buttons examples
 
     https://github.com/telegraf/telegraf/blob/5588e0599769377468828f657f7125acbb7870ac/docs/examples/keyboard-bot.js#L61-L125
+
+
+
+## Latest changes:
+
+- It requires docker and docker-compose
+    - Docker version 27.0.3-1
+    - Docker Compose version v2.29.7
+- Add dockerfile, .dockerignore and docker-composer.yml (to containerize app)
+- Command to start app: `docker-compose up -d`
+- Complete Cleanup in One Command: `docker system prune -a --volumes` (DANGERRRR!!!!!!)

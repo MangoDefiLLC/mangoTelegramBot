@@ -1,6 +1,10 @@
 # MangoTg Bot
 
- This telegram bot 
+This is the telegram chatBot for MangoDefi App
+
+# tech and libs
+- telegraf
+- node 
 
 # resorces
 

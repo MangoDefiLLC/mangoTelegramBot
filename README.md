@@ -22,11 +22,13 @@ telegraf buttons examples
 
 
 
+## Getting started...
+
+- Create .env file `mv .env_example .env` and add your variables
+- Build and start docker `docker-compose up -d`
+- Done! Docker should be running in the background.
+
 ## Latest changes:
 
+- Added dockerfile, .dockerignore and docker-composer.yml (to containerize app)
 - It requires docker and docker-compose
-    - Docker version 27.0.3-1
-    - Docker Compose version v2.29.7
-- Add dockerfile, .dockerignore and docker-composer.yml (to containerize app)
-- Command to start app: `docker-compose up -d`
-- Complete Cleanup in One Command: `docker system prune -a --volumes` (DANGERRRR!!!!!!)
